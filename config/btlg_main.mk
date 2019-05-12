@@ -9,7 +9,7 @@ PRODUCT_PACKAGES += \
     VisualizationWallpapers \
     GboardGoPreb \
     Jelly \
-    MusicPlayer \
+    Phonograph \
     bootanimation.zip \
     WeatherClient \
     OmniStyle
@@ -30,6 +30,10 @@ endif
 ifeq ($(BOOTLEGGERS_SITDOWN),true)
     PRODUCT_PACKAGES += \
         Lawnchair
+
+PRODUCT_COPY_FILES += \
+    vendor/bootleggers/prebuilt/lawnchair/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/bootleggers/prebuilt/lawnchair/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
 
     DEVICE_PACKAGE_OVERLAYS += \
         vendor/bootleggers/overlay/lawnchair
@@ -74,43 +78,88 @@ PRODUCT_PACKAGES += \
 # Theme-Required overlays packages
 PRODUCT_PACKAGES += \
     DarkThemeAndroidOverlay \
+    DarkThemeContactsOverlay \
+    DarkThemeDialerOverlay \
+    DarkThemeFilesOverlay \
+    DarkThemeOTAOverlay \
+    DarkThemePhonographOverlay \
     DarkThemeSettingsOverlay \
     DarkThemeSystemUIOverlay \
     BlackThemeAndroidOverlay \
+    BlackThemeContactsOverlay \
+    BlackThemeDialerOverlay \
+    BlackThemeFilesOverlay \
+    BlackThemeOTAOverlay \
+    BlackThemePhonographOverlay \
     BlackThemeSettingsOverlay \
     BlackThemeSystemUIOverlay \
     ShishuThemeAndroidOverlay \
+    ShishuThemeContactsOverlay \
+    ShishuThemeDialerOverlay \
+    ShishuThemeFilesOverlay \
     ShishuThemeGMSOverlay \
+    ShishuThemeOTAOverlay \
+    ShishuThemePhonographOverlay \
     ShishuThemeSettingsOverlay \
     ShishuThemeSystemUIOverlay \
     ShishuThemeWellbeingOverlay \
     ShishuNightsThemeAndroidOverlay \
+    ShishuNightsThemeContactsOverlay \
+    ShishuNightsThemeDialerOverlay \
+    ShishuNightsThemeFilesOverlay \
     ShishuNightsThemeGMSOverlay \
+    ShishuNightsThemeOTAOverlay \
+    ShishuNightsThemePhonographOverlay \
     ShishuNightsThemeSettingsOverlay \
     ShishuNightsThemeSystemUIOverlay \
     ShishuNightsThemeWellbeingOverlay \
     ShishuIllusionsThemeAndroidOverlay \
+    ShishuIllusionsThemeContactsOverlay \
+    ShishuIllusionsThemeDialerOverlay \
+    ShishuIllusionsThemeFilesOverlay \
     ShishuIllusionsThemeGMSOverlay \
+    ShishuIllusionsThemeOTAOverlay \
+    ShishuIllusionsThemePhonographOverlay \
     ShishuIllusionsThemeSettingsOverlay \
     ShishuIllusionsThemeSystemUIOverlay \
     ShishuIllusionsThemeWellbeingOverlay \
     ShishuImmensityThemeAndroidOverlay \
+    ShishuImmensityThemeContactsOverlay \
+    ShishuImmensityThemeDialerOverlay \
+    ShishuImmensityThemeFilesOverlay \
     ShishuImmensityThemeGMSOverlay \
+    ShishuImmensityThemeOTAOverlay \
+    ShishuImmensityThemePhonographOverlay \
     ShishuImmensityThemeSettingsOverlay \
     ShishuImmensityThemeSystemUIOverlay \
     ShishuImmensityThemeWellbeingOverlay \
     ShishuAmalgamationThemeAndroidOverlay \
+    ShishuAmalgamationThemeContactsOverlay \
+    ShishuAmalgamationThemeDialerOverlay \
+    ShishuAmalgamationThemeFilesOverlay \
     ShishuAmalgamationThemeGMSOverlay \
+    ShishuAmalgamationThemeOTAOverlay \
+    ShishuAmalgamationThemePhonographOverlay \
     ShishuAmalgamationThemeSettingsOverlay \
     ShishuAmalgamationThemeSystemUIOverlay \
     ShishuAmalgamationThemeWellbeingOverlay \
     ShishuCosmosThemeAndroidOverlay \
+    ShishuCosmosThemeContactsOverlay \
+    ShishuCosmosThemeDialerOverlay \
+    ShishuCosmosThemeFilesOverlay \
     ShishuCosmosThemeGMSOverlay \
+    ShishuCosmosThemeOTAOverlay \
+    ShishuCosmosThemePhonographOverlay \
     ShishuCosmosThemeSettingsOverlay \
     ShishuCosmosThemeSystemUIOverlay \
     ShishuCosmosThemeWellbeingOverlay \
     ShishuProtostarThemeAndroidOverlay \
+    ShishuProtostarThemeContactsOverlay \
+    ShishuProtostarThemeDialerOverlay \
+    ShishuProtostarThemeFilesOverlay \
     ShishuProtostarThemeGMSOverlay \
+    ShishuProtostarThemeOTAOverlay \
+    ShishuProtostarThemePhonographOverlay \
     ShishuProtostarThemeSettingsOverlay \
     ShishuProtostarThemeSystemUIOverlay \
     ShishuProtostarThemeWellbeingOverlay
@@ -136,6 +185,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ShishuTestOv \
     ShishuTestOv2
+
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
 
 # DU-Fonts
 PRODUCT_PACKAGES += \
