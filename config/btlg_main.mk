@@ -14,10 +14,8 @@ PRODUCT_PACKAGES += \
     WeatherClient \
     OmniStyle
 
-ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
     PRODUCT_PACKAGES += \
         ShishuOTA
-endif
 
 ifneq ($(TARGET_USE_SINGLE_BOOTANIMATION),true)
     PRODUCT_PACKAGES += \
